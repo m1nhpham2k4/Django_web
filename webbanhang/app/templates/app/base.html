@@ -19,6 +19,9 @@
     <script src="{%static 'app/js/owl.carousel.min.js'%}"></script>
     <title>Web bán hàng</title>
 
+    <script type="text/javascript">
+      var user = '{{request.user}}'
+    </script>
 </head>
 <body>
     <!-- Menu -->
@@ -48,7 +51,7 @@
               </ul>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Giới thiệu</a>
+                <a href="{% url 'cart' %}" class="nav-link">cart</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">Liên hệ</a>
@@ -66,12 +69,12 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Trang cá nhân</a></li>
-                  <li><a class="dropdown-item" href="#">Đơn hàng</a></li>
+                  <li><a class="dropdown-item" href="{%url 'cart'%}">Đơn hàng</a></li>
                   <li><a class="dropdown-item" href="#">Thoát</a></li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="{% url 'card' %}" class="nav-link">Giỏ hàng</a>
+                <a href="{% url 'cart' %}" class="nav-link">Giỏ hàng</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Đăng nhập</a>
@@ -85,12 +88,13 @@
     <!-- main -->
     {% block banner_slider %}{% endblock banner_slider %}
     {% block main-content %}{% endblock main-content %}
-    {% block card_content %}{% endblock card_content %} 
+    {% block cart_content %}{% endblock cart_content %} 
     {%block 'checkout' %}{% endblock 'checkout' %}
 
     <!-- footer -->
     <footer class="container-fluid bg-success text-center fixed-bottom p-2 mt-5">
         copyright 2022
     </footer>
-</body>
+    <script src="{%static 'app/js/cart.js'%}"></script>
+  </body>
 </html>

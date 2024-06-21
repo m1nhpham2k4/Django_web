@@ -56,55 +56,13 @@
       <div class="box-element product">
           <h6 class="text-center"><strong>{{product.name}}</strong></h6>
           <hr>
-          <button class="btn btn-outline-secondary add-btn">Add to cart</button>
+          <button data-product={{product.id}} data-action = 'add' class="btn btn-outline-secondary add-btn update-cart">Add to cart</button>
           <a href="" class="btn btn-outline-success">View</a>
           <h4 style="display: inline-block; float: right;"><strong>${{product.price | floatformat:2}}</strong></h4>
       </div>
   </div>
   {% endfor %}
 </div>
-<!-- <div class="row">
-  <div class="col-lg-3">
-      <img src="{%static 'app/images/fullcream-milk.png'%}" alt="" class="thumbnail">
-      <div class="box-element product">
-          <h6 class="text-center"><strong>Product 5</strong></h6>
-          <hr>
-          <button class="btn btn-outline-secondary add-btn">Add gio hang</button>
-          <a href="" class="btn btn-outline-success">Xem</a>
-          <h4 style="display: inline-block; float: right;"><strong>200.000 VND</strong></h4>
-      </div>
-  </div>
-  <div class="col-lg-3">
-    <img src="{%static 'app/images/icbars.png'%}" alt="" class="thumbnail">
-    <div class="box-element product">
-        <h6 class="text-center"><strong>Product 6</strong></h6>
-        <hr>
-        <button class="btn btn-outline-secondary add-btn">Add gio hang</button>
-        <a href="" class="btn btn-outline-success">Xem</a>
-        <h4 style="display: inline-block; float: right;"><strong>200.000 VND</strong></h4>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <img src="{%static 'app/images/kulfi.png'%}" alt="" class="thumbnail">
-    <div class="box-element product">
-        <h6 class="text-center"><strong>Product 7</strong></h6>
-        <hr>
-        <button class="btn btn-outline-secondary add-btn">Add gio hang</button>
-        <a href="" class="btn btn-outline-success">Xem</a>
-        <h4 style="display: inline-block; float: right;"><strong>200.000 VND</strong></h4>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <img src="{%static 'app/images/milk-shake-chocolate.png'%}" alt="" class="thumbnail">
-    <div class="box-element product">
-        <h6 class="text-center"><strong>Product 8</strong></h6>
-        <hr>
-        <button class="btn btn-outline-secondary add-btn">Add gio hang</button>
-        <a href="" class="btn btn-outline-success">Xem</a>
-        <h4 style="display: inline-block; float: right;"><strong>200.000 VND</strong></h4>
-    </div>
-  </div>
-</div> -->
 <br /><br /><br /><br />
 
 {% endblock main-content %}
